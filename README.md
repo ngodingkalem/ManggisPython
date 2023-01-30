@@ -25,11 +25,11 @@ bot = Telegram('1234567890:AAEbM9Unep5MSrjNGlJHZNqbVBROg6librw', 'Etc/GMT-7')
 | `Etc/GMT-8` | Waktu Indonesia Bagian Tengah |
 | `Etc/GMT-9` | Waktu Indonesia Bagian Timur |
 
-## `centMessage`
+## centMessage
 
 `centMessage`(abaikan) digunakan untuk mengecek apakah ada pesan masuk atau tidak. 
 
-## `coftMessage()`
+## coftMessage()
 
 `coftMessage()` di gunakan untuk memfilter atau mengecek sebuah pesan, apabila sesuai maka pesan tersebut akan diterima dan dibalas sesuai pengaturan user. Dengan memasukkan beberapa argumen yang tersedia di bawah ini.
 
@@ -41,7 +41,7 @@ bot = Telegram('1234567890:AAEbM9Unep5MSrjNGlJHZNqbVBROg6librw', 'Etc/GMT-7')
 | `userUsername` | Opsional | ∞ | String | Ya | `fromUsername` | Mengecek username user. |
 | `checkUserUsername` | `True` atau `False` | 1 | Booelan | Tidak | `msgFrom` | Mengecek apakah user menggunakan username atau tidak. `True` untuk Ya, `False` untuk tidak. |
 | `time` | `0` - `23`, `0` - `59`, `0` - `59` | 6 | Integer | Tidak | `timeZoneHour`, `timeZoneMinute` dan `timeZoneSecond` | Mengecek apakah waktu dimana pesan diterima sama seperti yang telah di atur di argumen `time`. Contoh `time=[1, 30, 30, 23, 0, 5]`, artinya hanya menerima pesan di antara jam `01.30.30` sampai `23.00.05`. |
-| `day` | `0` - `1` | ∞ | Integer | Tidak | `timeZoneDay` | Mengecek apakah hari dimana pesan diterima sama seperti yang telah di atur di argumen `day`. Contoh `day=[0,5]`, artinya hanya menerima pesan di hari `Ahad` dan `Kamis`. |
+| `day` | `0` - `6` | ∞ | Integer | Tidak | `timeZoneDay` | Mengecek apakah hari dimana pesan diterima sama seperti yang telah di atur di argumen `day`. Contoh `day=[0, 5]`, artinya hanya menerima pesan di hari `Ahad` dan `Kamis`. |
 | `dOTM` | `1` - `31` | ∞ | Integer | Tidak | `timeZoneDOTM` | Mengecek apakah tanggal dimana pesan diterima sama seperti yang telah di atur di argumen `dOTM`. Contoh `dOTM=[29, 3]`, artinya hanya menerima pesan di tanggal `29` dan `3`. |
 | `month` | `1` - `12` | ∞ | Integer | Tidak | `timeZoneMonth` | Mengecek apakah bulan dimana pesan diterima sama seperti yang telah di atur di argumen `month`. Contoh `month=[2, 11]`, artinya hanya menerima pesan di bulan `Februari` dan `November`. |
 | `chatId` | Opsional | ∞ | Integer | Tidak | `chatId` | Mengecek id chat. |
@@ -55,7 +55,7 @@ bot = Telegram('1234567890:AAEbM9Unep5MSrjNGlJHZNqbVBROg6librw', 'Etc/GMT-7')
 | `messageFormat` | `animation`, `audio`, `document`, `photo`, `sticker`, `video`, `video_note`, `voice`, `contact`, `dice`, `game`, `poll`, `venue`, `location`, `invoice` | ∞ | String | Tidak | `message` | Mengecek format pesan. Isi argumen bisa saja berbeda, tergantung pada format pesan di `https://core.telegram.org/bots/api` |
 | `messageCaption` | Opsional | ∞ | String | Ya | `msgCaption` | Mengecek caption dari pesan `animation`, `audio`, `document`, `photo`, `video`, `atau` `voice`. |
 
-## `postReq()`
+## postReq()
 
 Gunakan `postReq()` untuk request ke api Telegram. Contoh:
 
@@ -63,7 +63,7 @@ Gunakan `postReq()` untuk request ke api Telegram. Contoh:
 postReq('sendMessage', text='Hello Wolrd!', chat_id=1234567890)
 ```
 
-## `getField()`
+## getField()
 
 Gunakan `getField()` untuk mendapatkan field sesuai keinginan. Contoh:
 
@@ -104,14 +104,14 @@ msgCaption = message⪼caption
 | `timeZoneMonth` | Bulan dalam angka |
 
 
-## `trigger()`
+## trigger()
 
 Gunakan `trigger()` untuk melakukan pesan terjadwal. Dengan memasukkan beberapa argumen yang tersedia di bawah ini
 
 | Argumen | Isi Argumen | Jumlah Isi | Tipe | Regex | Dicocokkan Dengan Properti | Deskripsi |
 | :- | :- | :- | :- | :- | :- | :- |
 | `time` | `0` - `24`, `0` - `59`, `0` - `59` | 3 | Integer | Tidak | `timeZoneHour`, `timeZoneMinute` dan `timeZoneSecond` | Mengecek apakah waktu dimana pesan diterima sama seperti yang telah di atur di argumen `time`. Contoh `time=[1, 30, 0]`, artinya hanya menerima di jam `01.30.00`. |
-| `day` | `0` - `1` | ∞ | Integer | Tidak | `timeZoneDay` | Mengecek apakah hari sekarang sama seperti yang telah di atur di argumen `day`. Contoh `day=[0,5]`, artinya hanya menerima di hari `Ahad` dan `Kamis`. |
+| `day` | `0` - `6` | ∞ | Integer | Tidak | `timeZoneDay` | Mengecek apakah hari sekarang sama seperti yang telah di atur di argumen `day`. Contoh `day=[0, 5]`, artinya hanya menerima di hari `Ahad` dan `Kamis`. |
 | `dOTM` | `1` - `31` | ∞ | Integer | Tidak | `timeZoneDOTM` | Mengecek apakah tanggal sekarang sama seperti yang telah di atur di argumen `dOTM`. Contoh `dOTM=[29, 3]`, artinya hanya menerima di tanggal `29` dan `3`. |
 | `month` | `1` - `12` | ∞ | Integer | Tidak | `timeZoneMonth` | Mengecek apakah bulan sekarang sama seperti yang telah di atur di argumen `month`. Contoh `month=[2, 11]`, artinya hanya menerima di bulan `Februari` dan `November`. |
 | `timeStamp` | Opsional | ∞ | Integer | Tidak | `timeStamp` | Mengecek apakah `timeStamp` sekarang sama seperti yang telah di atur di argumen `timeStamp`. |
@@ -123,7 +123,7 @@ Gunakan `trigger()` untuk melakukan pesan terjadwal. Dengan memasukkan beberapa 
 ```python
 from module import Telegram
 
-bot = Telegram('5813820925:AAEbM9Unep4MSrjMGlJHZNqbVKROg9librw', 'Etc/GMT-7')
+bot = Telegram('5813820926:AAEbN9Unep4MSrjMGlJHZNqbVKROg9librw', 'Etc/GMT-7')
 
 while True:
     if bot.centMessage:
@@ -154,7 +154,7 @@ Agar lebih mudah untuk dipahami bisa di tulis seperti di bawah ini
 ```python
 from module import Telegram
 
-bot = Telegram('5813820925:AAEbM9Unep4MSrjMGlJHZNqbVKROg9librw', 'Etc/GMT-7')
+bot = Telegram('5813820926:AAEbN9Unep4MSrjMGlJHZNqbVKROg9librw', 'Etc/GMT-7')
 
 while True:
     if bot.centMessage:
