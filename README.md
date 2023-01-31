@@ -1,5 +1,7 @@
 # ManggisPython
 
+ManggisPython adalah sebuah script untuk Bot Telegram yang menggunakan metode long polling, dan di jalankan dengan bahasa pemrograman Python.
+
 ## Modul
 
 - requests
@@ -21,17 +23,17 @@ bot = Telegram('1234567890:AAEbM9Unep5MSrjNGlJHZNqbVBROg6librw', 'Etc/GMT-7')
 
 | Time Zone | Zona Waktu |
 | :-: | :-: |
-| `Etc/GMT-7` | Waktu Indonesia Bagian Barat |
-| `Etc/GMT-8` | Waktu Indonesia Bagian Tengah |
-| `Etc/GMT-9` | Waktu Indonesia Bagian Timur |
+| Etc/GMT-7 | Waktu Indonesia Bagian Barat |
+| Etc/GMT-8 | Waktu Indonesia Bagian Tengah |
+| Etc/GMT-9 | Waktu Indonesia Bagian Timur |
 
 ## centMessage
 
-`centMessage`(abaikan) digunakan untuk mengecek apakah ada pesan masuk atau tidak. 
+`centMessage` digunakan untuk mengecek apakah ada pesan masuk atau tidak. 
 
 ## coftMessage()
 
-`coftMessage()` di gunakan untuk memfilter atau mengecek sebuah pesan, apabila sesuai maka pesan tersebut akan diterima dan dibalas sesuai pengaturan user. Dengan memasukkan beberapa argumen yang tersedia di bawah ini.
+`coftMessage()` di gunakan untuk memfilter atau mengecek sebuah pesan, apabila sesuai maka pesan tersebut akan diterima dan dibalas sesuai pengaturan user. Dengan memasukkan beberapa parameter yang tersedia di bawah ini.
 
 | Argumen | Isi Argumen | Jumlah Isi | Tipe | Regex | Dicocokkan Dengan Field/Properti | Deskripsi |
 | :- | :- | :- | :- | :- | :- | :- |
