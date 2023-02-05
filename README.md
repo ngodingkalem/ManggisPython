@@ -119,6 +119,7 @@ Gunakan `trigger()` untuk melakukan pesan terjadwal. Dengan memasukkan beberapa 
 | `timeStamp` | Opsional | ∞ | Integer | Tidak | `timeStamp` | Mengecek apakah `timeStamp` sekarang sama seperti yang telah di atur di argumen `timeStamp`. |
 
 > `trigger()` mempunyai cooldown 10 detik.
+
 > Untuk argumen time, apabila script berjalan lambat kemungkinan `trigger()` akan terlambat dan tidak sesuai dengan waktu yang telah di atur di argumen time.
 
 ## Contoh
