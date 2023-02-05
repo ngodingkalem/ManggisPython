@@ -112,13 +112,14 @@ Gunakan `trigger()` untuk melakukan pesan terjadwal. Dengan memasukkan beberapa 
 
 | Argumen | Isi Argumen | Jumlah Isi | Tipe | Regex | Dicocokkan Dengan Properti | Deskripsi |
 | :- | :- | :- | :- | :- | :- | :- |
-| `time` | `0` - `24`, `0` - `59`, `0` - `59` | 3 | Integer | Tidak | `timeZoneHour`, `timeZoneMinute` dan `timeZoneSecond` | Mengecek apakah waktu dimana pesan diterima sama seperti yang telah di atur di argumen `time`. Contoh `time=[1, 30, 0]`, artinya hanya menerima di jam `01.30.00`. |
+| `time` | `0` - `24`, `0` - `59`, `0` - `50` | 3 | Integer | Tidak | `timeZoneHour`, `timeZoneMinute` dan `timeZoneSecond` | Mengecek apakah waktu dimana pesan diterima sama seperti yang telah di atur di argumen `time`. Contoh `time=[1, 30, 0]`, artinya hanya menerima di jam `01.30.00`. |
 | `day` | `0` - `6` | ∞ | Integer | Tidak | `timeZoneDay` | Mengecek apakah hari sekarang sama seperti yang telah di atur di argumen `day`. Contoh `day=[0, 5]`, artinya hanya menerima di hari `Ahad` dan `Kamis`. |
 | `dOTM` | `1` - `31` | ∞ | Integer | Tidak | `timeZoneDOTM` | Mengecek apakah tanggal sekarang sama seperti yang telah di atur di argumen `dOTM`. Contoh `dOTM=[29, 3]`, artinya hanya menerima di tanggal `29` dan `3`. |
 | `month` | `1` - `12` | ∞ | Integer | Tidak | `timeZoneMonth` | Mengecek apakah bulan sekarang sama seperti yang telah di atur di argumen `month`. Contoh `month=[2, 11]`, artinya hanya menerima di bulan `Februari` dan `November`. |
 | `timeStamp` | Opsional | ∞ | Integer | Tidak | `timeStamp` | Mengecek apakah `timeStamp` sekarang sama seperti yang telah di atur di argumen `timeStamp`. |
 
 > `trigger()` mempunyai cooldown 10 detik.
+> Untuk argumen time, apabila script berjalan lambat kemungkinan `trigger()` akan terlambat dan tidak sesuai dengan waktu yang telah di atur di argumen time.
 
 ## Contoh
 
