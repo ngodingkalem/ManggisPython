@@ -185,7 +185,7 @@ class Telegram:
         if self.accTriggerTime < self.timeStamp:
             for x in kwargs:
                 if x == 'time':
-                    self.triggerVar.append(True,) if kwargs['time'][0] == self.timeZoneHour and kwargs['time'][1] == self.timeZoneMinute and kwargs['time'][2] == self.timeZoneSecond else self.triggerVar.append(False,)
+                    self.triggerVar.append(True,) if kwargs['time'][0] == self.timeZoneHour and kwargs['time'][1] == self.timeZoneMinute and kwargs['time'][2] == self.timeZoneSecond else self.triggerVar.append(True,) if kwargs['time'][0] == self.timeZoneHour and kwargs['time'][1] == self.timeZoneMinute and kwargs['time'][2] + 9 > self.timeZoneSecond > kwargs['time'][2] else self.triggerVar.append(False,)
                 elif x == 'day':
                     self.triggerVar.append(True,) if self.timeZoneDay in kwargs['day'] else self.triggerVar.append(False,)
                 elif x == 'dOTM':
