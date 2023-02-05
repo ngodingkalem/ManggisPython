@@ -135,7 +135,7 @@ while True:
             bot.postReq('sendMessage', reply_to_message_id=bot.msgId, chat_id=bot.chatId, text='Hai kak!')
         elif bot.coftMessage(messageFormat=['photo']):
             bot.postReq('sendMessage', text='Hemm...', chat_id=bot.getField('message.chat.id'))
-        elif bot.coftMessage(messageText=['/time'], time=[7, 18, 00, 9, 53, 00]):
+        elif bot.coftMessage(messageText=['/time'], time=[7, 18, 0, 9, 53, 0]):
             bot.postReq('sendMessage', chat_id=bot.chatId, text='Saat ini bot online!')
         elif bot.coftMessage(messageText=['/time']):
             bot.postReq('sendMessage', chat_id=bot.chatId, text='Saat ini bot offline!')
@@ -149,7 +149,7 @@ while True:
             bot.postReq('sendMessage', text='Sekarang hari rabu!', chat_id=bot.chatId)
         elif bot.coftMessage(messageText=['/start'], chatType=['group'], chatTitle=['Tes Bot']):
             bot.postReq('sendMessage', chat_i=bot.chatId, text=f'Hai member group{bot.chatTitle}')
-    if bot.trigger(time=[21, 10, 00], dOTM=[34] day=[0], month=[1, 2]):
+    if bot.trigger(time=[21, 10, 0], dOTM=[34] day=[0], month=[1, 2]):
         bot.postReq('sendMessage', chat_id=bot.chatId, text='Sekarang jam 21:10:00!')
 ```
 
@@ -168,7 +168,7 @@ while True:
         elif bot.coftMessage(messageFormat=['photo']):
             bot.postReq('sendMessage', text='Hemm...', chat_id=bot.getField('message.chat.id'))
             
-        elif bot.coftMessage(messageText=['/time'], time=[7, 18, 00, 9, 53, 00]):
+        elif bot.coftMessage(messageText=['/time'], time=[7, 18, 0, 9, 53, 0]):
             bot.postReq('sendMessage', chat_id=bot.chatId, text='Saat ini bot online!')
             
         elif bot.coftMessage(messageText=['/time']):
@@ -189,7 +189,7 @@ while True:
         elif bot.coftMessage(messageText=['/start'], chatType=['group'], chatTitle=['Tes Bot']):
             bot.postReq('sendMessage', chat_i=bot.chatId, text=f'Hai member group{bot.chatTitle}')
             
-    if bot.trigger(time=[21, 10, 00], dOTM=[34] day=[0], month=[1, 2]):
+    if bot.trigger(time=[21, 10, 0], dOTM=[34] day=[0], month=[1, 2]):
         bot.postReq('sendMessage', chat_id=bot.chatId, text='Sekarang jam 21:10:00!')
 ```
 
